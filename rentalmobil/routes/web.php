@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::middleware(['auth'])->group(function () {
 Route::get('/mobil',[MobilController::class, 'index']);
 Route::get('/mobil/create',[MobilController::class, 'create']);
 Route::post('/mobil/simpanData',[MobilController::class,'store']);
@@ -42,3 +43,14 @@ Route::post('/user/simpan-data',[UserController::class,'store']);
 Route::get('/user/edit/{id}',[UserController::class,'edit']);
 Route::post('/user/update/{id}',[UserController::class,'update']);
 Route::get('/user/delete/{id}',[UserController::class,'delete']);
+
+Route::get('/logout',[Auth\LoginController::class,'logout']);
+});
+
+
+Route::get('/login',[Auth\LoginController::class,'index'])->name('login');
+Route::post('/login/proses',[Auth\LoginController::class,'login']);
+
+
+Route::get('/register',[Auth\RegisterController::class,'index']);
+Route::post('register/proses',[Auth\RegisterController::class,'register']);

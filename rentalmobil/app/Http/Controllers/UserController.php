@@ -20,6 +20,7 @@ class UserController extends Controller
             'name' => 'required',
             'email' => 'required',
             'contact' => 'required',
+            'password' => 'required',
         ]);
         //simpan kedalam database
         User::create($userData);
@@ -38,6 +39,7 @@ class UserController extends Controller
             'name' => 'required',
             'email' => 'required',
             'contact' => 'required',
+            'password' => 'required',
         ]);
         // cara pertama $validasiTipeMobil = $request->validate(['tipe' => 'required']);
         User::find($id)->update($validasiDataUser);

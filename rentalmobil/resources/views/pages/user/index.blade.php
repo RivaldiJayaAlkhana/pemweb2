@@ -19,6 +19,7 @@
                                 <th>Nama</th>
                                 <th>Email</th>
                                 <th>Kontak</th>
+                                <th>Password</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -29,6 +30,7 @@
                                 <td>{{$user->name}}</td>
                                 <td>{{$user->email}}</td>
                                 <td>{{$user->contact}}</td>
+                                <td>{{$user->password}}</td>
                                 <td>
                                     <a href="/user/edit/{{ $user->id}}" class="btn btn-warning">Edit</a>
                                     <a href="/user/delete/{{ $user->id}}"class="btn btn-danger">Hapus</a>

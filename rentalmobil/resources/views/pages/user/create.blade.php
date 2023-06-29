@@ -25,6 +25,10 @@
                         <label for="">Kontak</label>
                         <input type="text" class="form-control" name="contact" required>
                     </div>
+                    <div class="form-group">
+                        <label for="">Password</label>
+                        <input type="text" class="form-control" name="password" required>
+                    </div>
                     <div class="form-group mt-3">
                         <button class="form-control btn btn-primary" type="submit">Simpan</button>
                     </div>
